@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+:root{
+    --cor-azul: #55aaff;
+    --cor-azul2: #0190ff;
+    --cor-fundo: #f1f5f8;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+
+.agradecimento-conteiner{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+.img-wrap{
+    width: 300px;
+    margin: 0 auto;
+    animation: opacidade 2s forwards;
+}
+
+.texto-agradecimento h1{
+    text-align: center;
+    font-size: 50px;
+    color: var(--cor-azul2);
+    animation: opacidade 1s forwards;
+    opacity: 0;
+    animation-delay: .6s;
+}
+
+.texto-agradecimento p {
+    text-align: center;
+    color: rgb(56, 56, 56);
+    animation: opacidade 1s forwards;
+    opacity: 0;
+    animation-delay: 1s;
+    margin-top: 10px;
+}
+
+
+@keyframes opacidade {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 790px) {
+    .texto-agradecimento h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 620px) {
+    .texto-agradecimento h1{
+        font-size: 30px;
+    }
+    .texto-agradecimento p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .texto-agradecimento h1{
+        font-size: 25px;
+    }
+    .texto-agradecimento p{
+        max-width: 250px;
+        margin: 10px auto;
+    }
+}
